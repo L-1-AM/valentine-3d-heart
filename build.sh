@@ -6,10 +6,19 @@ IFS=$'\n\t'
 
 npx tsc
 
-npx esbuild \
-   build/index.js \
-   --bundle \
-   --minify \
-   --sourcemap \
-   --target=chrome98 \
-   --outfile=public/index.js
+if [[ "$ENV" == 'prod' ]]; then
+   npx esbuild \
+      build/index.js \
+      --bundle \
+      --minify \
+      --target=chrome98 \
+      --outfile=public/index.js
+else
+   npx esbuild \
+      build/index.js \
+      --bundle \
+      --minify \
+      --sourcemap \
+      --target=chrome98 \
+      --outfile=public/index.js
+fi
