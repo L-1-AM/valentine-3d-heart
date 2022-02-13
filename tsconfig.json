@@ -1,0 +1,11 @@
+// TypeScript Configuration
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "lib": ["es5", "es2015.promise", "dom", "es2015"],
+    // Directory Settings
+    "rootDir": "src",
+    "outDir": "build"
+  },
+  "include": ["src/**/*"]
+}

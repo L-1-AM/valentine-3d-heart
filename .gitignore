@@ -1,0 +1,9 @@
+# Node.js and NPM.
+node_modules/
+
+# TypeScript
+build/
+
+# Esbuild
+public/index.js
+public/index.js.map
